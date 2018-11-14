@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Name
+
+GIPHY Search
+
+## Appoarch 
+* Choose to use React & Redux to completed.
+* Go to the website https://developers.giphy.com/, register for a API key.
+* Find the search endpoint in document, read the part of request parameters.For the requirement, 
+  get the request url: http://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=USER_INPUT_ITEM  
+* In main Component <App />, include the <SearchBox /> and result set of the image elements.
+* In <SearchBox />, binding this.state.field to input value with the onChange event. And dispatch an action of "GET_GIFS"
+  when user typing.
+* For getGifs(), using axios GET to retrieve the response data from GIPHY API.
+* Then depends on action type of "GET_GIFS", filter the result for update the state.
+* In <App /> render function, using map function to return a list of <div class="grid-item"></div> elements.Then
+  put it in JSX in <App /> using expression like {gifsItems}.
+* For css hover animation, choose to use transform: scale(1.2) and opacity of <p> text of ID.
+
 ## Available Scripts
 
 In the project directory, you can run:
